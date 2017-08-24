@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="../static/css/main.css">
 
         <script src="../static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        {% block scriptblk %}
+        {% endblock %}
     </head>
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -35,7 +37,7 @@
           <ul class="nav navbar-nav navbar-right">
               <li><a href="{{ url_for('serial_con') }}"> Serial Connections </a></li>
               <li><a href="{{ url_for('list_sim') }}"> List Sims </a></li>
-              <li><a href="#"> Place Holder </a></li>
+              <li><a href="{{ url_for('sim_links') }}"> Get Links </a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>

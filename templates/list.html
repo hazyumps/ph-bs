@@ -5,7 +5,14 @@ My Fuckin Shit
 {% endblock %}
 
 {% block topcontent %}
-{{  }}
+    <table align="center">
+    {% for key, value in result.items() %}
+       <tr>
+           <td align="center">  {{ key }}  </td>
+           <td align="center">  {{ value }}  </td>
+       </tr>
+    {% endfor %}
+    </table>
 {% endblock %}
 
 {% block botcontent %}

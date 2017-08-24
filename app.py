@@ -51,6 +51,18 @@ def list_sim():
     r = requests.get(list_sim_url, auth=(username, password))
     return r.content
 
+@app.route('/links')
+def sim_links():
+    sim_links_api = "/simengine/rest/link/" + sim_name
+    sim_links_url = v_url + v_api_port + sim_links_api
+    r = requests.get(sim_links_url, auth=(username, password))
+    return render_template('list.html', result=r.json())
+
+
+@app.route('/try')
+def get_topo():
+    return  render_template('topview.html')
+
 
 
 if __name__ == '__main__':
