@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Fuckin Shit - Export
+{% endblock %}
+
+{% block topcontent %}
+    <table align="center">
+    {% for key, value in result.items() %}
+       <tr>
+            <th><h3>{{ key }}</h3></th>
+            <td> <a href="{{ value }}"> <h3> Link </h3> </a> </td>
+       </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+{% block botcontent %}
+
+
+{% endblock %}
